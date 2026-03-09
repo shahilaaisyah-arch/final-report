@@ -1,0 +1,88 @@
+body, html{
+  margin:0; padding:0; font-family:Arial,sans-serif;
+}
+
+/* HEADER */
+header{
+  background:#004aad;
+  color:white;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+header h2{margin:0;}
+header nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+  font-weight:bold;
+}
+
+/* FRONT PAGE COVER */
+#cover{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background: linear-gradient(to bottom right,#004aad,#66a3ff);
+  color:white;
+  text-align:center;
+}
+.cover-box{
+  background: rgba(255,255,255,0.95);
+  padding:60px;
+  width:70%;
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  color:#004aad;
+}
+.cover-box h1{font-size:48px; margin:20px 0;}
+.cover-box h2{font-size:28px; margin:10px 0;}
+.cover-box h3{font-size:20px; margin:8px 0;}
+.cover-box p{font-size:18px; margin:6px 0;}
+.enter-btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:15px 30px;
+  background:#004aad;
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+  border-radius:8px;
+  transition:0.3s;
+}
+.enter-btn:hover{
+  background:#002f6c;
+  transform:translateY(-3px);
+}
+
+/* PAGE LAYOUT WITH SIDEBAR */
+.page-container{
+  display:flex;
+}
+.sidebar{
+  width:220px;
+  background:#f4f4f4;
+  padding:20px;
+  height:100vh;
+  position:sticky;
+  top:0;
+}
+.sidebar a{
+  display:block;
+  margin:10px 0;
+  text-decoration:none;
+  color:#004aad;
+}
+.sidebar a:hover{font-weight:bold;}
+
+.content{
+  flex:1;
+  padding:40px;
+}
+.content h2{margin-top:60px;}
