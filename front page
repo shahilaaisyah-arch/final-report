@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Laporan Latihan Industri</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="cover">
+  <div class="cover-box">
+    <h3>JABATAN TEKNOLOGI MAKLUMAT DAN KOMUNIKASI</h3>
+    <h3>POLITEKNIK SULTAN IDRIS SHAH</h3>
+
+    <h1>LAPORAN AKHIR LATIHAN INDUSTRI</h1>
+
+    <p>Disediakan oleh:</p>
+    <h2>NUUR SHAHILA AISYAH BINTI MOHD ZAAIZ</h2>
+
+    <p>No Matrik:</p>
+    <h3>17DXX21FXXXX</h3>
+
+    <p>Tempat Latihan Industri:</p>
+    <h3>NAMA SYARIKAT</h3>
+
+    <p>Alamat Syarikat Line 1<br>Alamat Syarikat Line 2</p>
+
+    <h3>Sesi 1 : 2025 / 2026</h3>
+
+    <a href="executive_summary.html" class="enter-btn">START REPORT</a>
+  </div>
+</section>
+
+</body>
+</html>
