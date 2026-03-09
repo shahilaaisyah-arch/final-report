@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Summary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h2>Industrial Training Report</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="executive_summary.html">Executive Summary</a>
+<a href="dedicated_appreciated.html">Dedicated & Appreciated</a>
+<a href="introduction.html">Introduction</a>
+<a href="company_background.html">Company Background</a>
+<a href="weekly_summary.html">Weekly Summary</a>
+<a href="technical_report.html">Technical Report</a>
+<a href="conclusion.html">Conclusion</a>
+</nav>
+</header>
+
+<div class="page-container">
+<div class="sidebar">
+<h3>Weeks</h3>
+<script>
+for(let i=1;i<=22;i++){
+  document.write('<a href="#week-'+i+'">Week '+i+'</a>');
+}
+</script>
+</div>
+
+<div class="content">
+<h1>Weekly Summary</h1>
+<script>
+for(let i=1;i<=22;i++){
+  document.write('<h2 id="week-'+i+'">Week '+i+'</h2><p>Isi content sendiri.</p>');
+}
+</script>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.sidebar a').forEach(anchor=>{
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
