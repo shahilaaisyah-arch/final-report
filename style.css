@@ -85,4 +85,8 @@ header nav a{
   flex:1;
   padding:40px;
 }
-.content h2{margin-top:60px;}
+.content p {
+  text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
