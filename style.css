@@ -124,3 +124,20 @@ header nav a:hover{ text-decoration: underline; }
   margin:20px auto;
   object-fit:contain;
 }
+
+.content {
+  max-width: 900px;     
+  margin: 40px auto;    
+  padding: 20px 40px;    
+}
+
+.content h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.content p {
+  text-align: justify;
+  line-height: 1.5;   /* spacing 1.5 */
+  font-size: 18px;
+}
