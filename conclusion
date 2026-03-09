@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Conclusion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h2>Industrial Training Report</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="executive_summary.html">Executive Summary</a>
+<a href="dedicated_appreciated.html">Dedicated & Appreciated</a>
+<a href="introduction.html">Introduction</a>
+<a href="company_background.html">Company Background</a>
+<a href="weekly_summary.html">Weekly Summary</a>
+<a href="technical_report.html">Technical Report</a>
+<a href="conclusion.html">Conclusion</a>
+</nav>
+</header>
+
+<div class="page-container">
+<div class="sidebar">
+<h3>Contents</h3>
+<a href="#section-1">Section 1</a>
+<a href="#section-2">Section 2</a>
+<a href="#section-3">Section 3</a>
+</div>
+
+<div class="content">
+<h1>Conclusion</h1>
+<h2 id="section-1">Section 1</h2><p>Isi content sendiri.</p>
+<h2 id="section-2">Section 2</h2><p>Isi content sendiri.</p>
+<h2 id="section-3">Section 3</h2><p>Isi content sendiri.</p>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.sidebar a').forEach(anchor=>{
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
