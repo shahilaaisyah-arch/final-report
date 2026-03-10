@@ -16,10 +16,35 @@ body {
   color: #333;
 }
 
+/* Header & Navigation */
+header {
+  background: #1a3c6e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav {
+  background: #2f5fa5;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 /* Container to center content */
 .container {
   max-width: 900px;
-  margin: 80px auto;
+  margin: 40px auto;
   padding: 40px;
   background: white;
   border-radius: 8px;
@@ -60,9 +85,30 @@ p {
 .company-info a:hover {
   text-decoration: underline;
 }
+
+/* Footer */
+footer {
+  background: #1a3c6e;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}
 </style>
 </head>
 <body>
+
+<header>
+  <h1>Industrial Training Report</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="executive_summary.html">Executive Summary</a>
+  <a href="company.html">Company Background</a>
+  <a href="training.html">Training Activities</a>
+  <a href="reflection.html">Reflection</a>
+</nav>
 
 <div class="container">
   <h1>INDUSTRIAL TRAINING REPORT SESSION II 2025/2026</h1>
@@ -78,6 +124,10 @@ p {
     <p>Company Website: <a href="#">www.leviat.com</a></p>
   </div>
 </div>
+
+<footer>
+  <p>© 2026 Industrial Training Report</p>
+</footer>
 
 </body>
 </html>
