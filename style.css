@@ -140,4 +140,5 @@ header nav a:hover{ text-decoration: underline; }
   text-align: justify;
   line-height: 1.5;   /* spacing 1.5 */
   font-size: 18px;
+  margin-bottom:18px;
 }
