@@ -1,39 +1,147 @@
-/* ===== PAGE LAYOUT ===== */
-.page-container {
-  display: flex;
-  background-color: #f0f2f5;
+body, html{
+  margin:0; 
+  padding:0; 
+  font-family: Arial, sans-serif;
 }
 
-/* ===== CONTENT (THE DOCUMENT AREA) ===== */
+/* ===== HEADER ===== */
+header{
+  background:#004aad;
+  color:white;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+header h2{ margin:0; }
+header nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+  font-weight:bold;
+}
+header nav a:hover{ text-decoration: underline; }
+
+/* ===== FRONT PAGE COVER ===== */
+#cover{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh; /* full screen */
+  background: linear-gradient(to bottom right,#004aad,#66a3ff);
+  color:white;
+  text-align:center;
+}
+.cover-box{
+  background: rgba(255,255,255,0.95);
+  padding:60px;
+  width:70%;
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  color:#004aad;
+  max-height:90vh;
+  overflow-y:auto;
+}
+.cover-box h1{ font-size:50px; margin:20px 0; }
+.cover-box h2{ font-size:32px; margin:10px 0; }
+.cover-box h3{ font-size:24px; margin:8px 0; }
+.cover-box p{ font-size:20px; margin:6px 0; }
+.enter-btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:15px 30px;
+  background:#004aad;
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+  border-radius:8px;
+  transition:0.3s;
+}
+.enter-btn:hover{
+  background:#002f6c;
+  transform:translateY(-3px);
+}
+
+/* ===== PAGE LAYOUT WITH SIDEBAR ===== */
+.page-container{
+  display:flex;
+  height:100vh; /* full screen */
+}
+
+.sidebar{
+  width:220px;
+  background:#f4f4f4;
+  padding:20px;
+  height:100vh;
+  position:sticky;
+  top:0;
+  overflow-y:auto;
+}
+.sidebar a{
+  display:block;
+  margin:12px 0;
+  text-decoration:none;
+  color:#004aad;
+  font-size:18px;
+}
+.sidebar a:hover{ font-weight:bold; }
+.sidebar h3{ font-size:22px; }
+
+/* ===== CONTENT ===== */
+.content{
+  flex:1;
+  padding:50px;
+  overflow-y:auto;
+}
+.content h1{ font-size:42px; margin-bottom:25px; }
+.content h2{ font-size:32px; margin-bottom:20px; }
+.content h3{ font-size:24px; margin-bottom:15px; }
+.content p{
+  text-align: justify;
+  line-height:1.5; /* spacing 1.5 */
+  font-size:18px;
+  margin-bottom:20px;
+}
+
+/* ===== CARDS ===== */
+.card{
+  border:1px solid #ccc;
+  padding:20px;
+  margin:15px 0;
+  border-radius:8px;
+  background:#fafafa;
+}
+
+/* ===== IMAGES ===== */
+.content img, .cover-box img{
+  max-width:100%;
+  max-height:80vh;
+  display:block;
+  margin:20px auto;
+  object-fit:contain;
+}
+
 .content {
-  flex: 1; /* Allows it to take up remaining space next to sidebar */
-  background: white;
-  
-  /* MARGIN LOGIC: This creates the "centered paper" look from your link */
-  max-width: 850px;     
+  max-width: 900px;     
   margin: 40px auto;    
-  
-  /* PADDING LOGIC: Space inside the paper so text doesn't touch the edges */
-  padding: 60px 80px;   
-  
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-  min-height: 100vh;
+  padding: 20px 40px;    
 }
 
-/* ===== TEXT JUSTIFICATION ===== */
 .content h1 {
   font-size: 36px;
-  margin-bottom: 30px;
-  text-align: center; 
-  color: #004aad;
-  text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .content p {
-  text-align: justify;      
-  text-justify: inter-word;  
-  line-height: 1.6;        
-  font-size: 18px;           
-  margin-bottom: 20px;       
-  color: #333;
+  text-align: justify;
+  line-height: 1.5;   /* spacing 1.5 */
+  font-size: 20px;
+  margin-bottom:2.5px;
+  margin-top:2.5px;
+  margin-left:3.5px;
+  margin-right:2.5px;
 }
