@@ -5,12 +5,13 @@
 
 <style>
 
+/* BODY */
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, sans-serif;
 }
 
-
+/* NAVIGATION */
 nav{
 background:#222;
 padding:15px;
@@ -28,17 +29,17 @@ nav a:hover{
 text-decoration:underline;
 }
 
-
+/* HERO BACKGROUND */
 .hero{
 background-image:url("image/background.png.png");
 background-size:cover;
 background-position:center;
-height:350px;
+height:400px;
 }
 
-
+/* TITLE SECTION */
 .title-section{
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,0.75);
 color:white;
 text-align:center;
 padding:40px;
@@ -46,7 +47,7 @@ font-size:22px;
 font-weight:bold;
 }
 
-
+/* BUTTON WEBSITE */
 .website-btn{
 display:inline-block;
 margin-top:20px;
@@ -62,19 +63,33 @@ font-size:16px;
 background:#2f5fa5;
 }
 
-
+/* LOGO SECTION */
 .logo-section{
 display:flex;
 justify-content:center;
 align-items:center;
 gap:80px;
-padding:50px;
+padding:60px;
 background:white;
 }
 
+/* LOGO BOX (semua sama size) */
+.logo-box{
+width:200px;
+height:120px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:white;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
 
-.logo-section img{
-height:180px;
+/* LOGO IMAGE */
+.logo-box img{
+max-width:100%;
+max-height:100%;
+object-fit:contain;
 }
 
 </style>
@@ -82,7 +97,7 @@ height:180px;
 
 <body>
 
-
+<!-- NAVIGATION -->
 <nav>
 <a href="index.html">Home</a>
 <a href="executive_summary.html">Executive Summary</a>
@@ -94,9 +109,10 @@ height:180px;
 <a href="conclusion.html">Conclusion</a>
 </nav>
 
-
+<!-- HERO BACKGROUND -->
 <div class="hero"></div>
 
+<!-- TITLE SECTION -->
 <div class="title-section">
 
 POLYTECHNIC SULTAN IDRIS SHAH <br>
@@ -104,8 +120,10 @@ DIPLOMA IN INFORMATION TECHNOLOGY (NETWORKING)
 
 <br>
 
-<p>608B, 3rd Floor, Block B, Jalan Lagoon Selatan,</p>
-<p>Bandar Sunway, 47500 Subang Jaya, Selangor</p>
+<p>
+608B, 3rd Floor, Block B, Jalan Lagoon Selatan, Bandar Sunway,  
+47500 Subang Jaya, Selangor
+</p>
 
 <a href="https://www.leviat.com" target="_blank" class="website-btn">
 Visit Company Website
@@ -113,17 +131,25 @@ Visit Company Website
 
 </div>
 
-
+<!-- LOGO SECTION -->
 <div class="logo-section">
 
+<div class="logo-box">
 <img src="image/politeknik.png">
-<img src="image/Leviat Logo.png.jpg>
+</div>
+
+<div class="logo-box">
+<img src="image/Leviat Logo.png.jpg">
+</div>
+
+<div class="logo-box">
 <img src="image/kementerian.png">
+</div>
 
 </div>
-  
+ 
 <footer>
-  <p>© 2026 Industrial Training Report</p>
+  <p> 2026 Industrial Training Report</p>
 </footer>
 
 </body>
