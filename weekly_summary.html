@@ -2,99 +2,113 @@
 <html>
 <head>
 <title>Industrial Training Report - Weekly Summary</title>
+
 <style>
-/* Reset & base styling */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   background-color: #f4f4f4;
-  color: #333;
-}
-header {
-  background: #1a3c6e;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-nav {
-  background: #2f5fa5;
-  padding: 10px;
-  text-align: center;
-}
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: justify;
-}
-/* Titles */
-h1 {
-  font-size: 26px;
-  color: #1a3c6e;
-  margin-bottom: 20px;
-  text-align: center;
-}
-p {
-  font-size: 16px;
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-/* Footer */
-footer {
-  background: #1a3c6e;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 40px;
-}
-/* Buttons */
-.week-btn {
-  padding: 8px 15px;
-  margin: 3px;
-  border: none;
-  background-color: #2f5fa5;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.week-btn:hover {
-  background-color: #1a3c6e;
-}
-/* Hidden content */
-.week-content {
-  display: none;
-  margin-top: 15px;
+  color: black;
 }
 
-  .header{
-background:#1a3c6e;
-color:white;
+.header{
+background:#D1B399;
+color:black;
 text-align:center;
 padding:15px;
 font-size:24px;
 font-weight:bold;
 letter-spacing:1px;
 }
-  
+
+nav {
+  background: #D1B399;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #E3DFD2;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: justify;
+}
+
+h1 {
+  font-size: 26px;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+
+strong{
+color:black;
+}
+
+footer {
+  background: #D1B399;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+.week-buttons{
+display:grid;
+grid-template-columns: repeat(11, 1fr);
+gap:5px;
+justify-items:center;
+margin-bottom:20px;
+}
+
+.week-btn {
+  padding:10px;
+  border:none;
+  background-color:#B0B7AB;
+  color:black;
+  font-weight:bold;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.week-btn:hover {
+  background-color:#9EA596;
+}
+
+.week-content {
+  display:none;
+  margin-top:15px;
+}
+
 </style>
+
 </head>
+
 <body>
 
 <div class="header">
@@ -116,9 +130,8 @@ INDUSTRIAL TRAINING REPORT<br>
 <div class="container">
   <h1>Weekly Summary</h1>
 
-  <!-- Buttons -->
-  <div style="text-align: center; margin-bottom: 20px;">
-    <!-- Generate 22 buttons -->
+
+  <div class="week-buttons">
     <script>
       for (let i = 1; i <= 22; i++) {
         document.write('<button class="week-btn" onclick="showWeek(\'week'+i+'\')">Week '+i+'</button>');
@@ -126,7 +139,7 @@ INDUSTRIAL TRAINING REPORT<br>
     </script>
   </div>
 
-  <!-- Week content -->
+  
   <script>
     for (let i = 1; i <= 22; i++) {
       document.write('<div id="week'+i+'" class="week-content"><h2>Week '+i+'</h2><p>Content for Week '+i+' goes here.</p></div>');
@@ -136,19 +149,23 @@ INDUSTRIAL TRAINING REPORT<br>
 </div>
 
 <footer>
-  <p>© [NUUR SHAHILA AISYAH]&nbsp;&nbsp;[17DDT23F1034]</p>
+  <p>[NUUR SHAHILA AISYAH]&nbsp;&nbsp;[17DDT23F1034]</p>
 </footer>
 
 <script>
+
 function showWeek(weekId) {
-  // Hide all week content
-  let contents = document.getElementsByClassName('week-content');
-  for (let i = 0; i < contents.length; i++) {
-    contents[i].style.display = 'none';
+
+  let contents=document.getElementsByClassName('week-content');
+
+  for(let i=0;i<contents.length;i++){
+    contents[i].style.display='none';
   }
-  // Show selected week
-  document.getElementById(weekId).style.display = 'block';
+
+  document.getElementById(weekId).style.display='block';
+
 }
+
 </script>
 
 </body>
