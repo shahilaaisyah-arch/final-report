@@ -4,26 +4,203 @@
 <title>Industrial Training Report - Weekly Summary</title>
 
 <style>
-body{font-family:"Times New Roman";background:#f4f4f4;}
-.container{max-width:950px;margin:40px auto;padding:30px;background:#E3DFD2;}
-.week-btn{padding:10px;margin:3px;background:#B0B7AB;border:none;cursor:pointer;}
-.week-content{display:none;background:white;padding:20px;margin-top:10px;}
+
+
+nav{
+background:#D1B399;
+padding:15px;
+text-align:center;
+position:relative;
+}
+
+.nav-links{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+position:relative;
+}
+
+.nav-links a::after{
+content:"";
+width:0%;
+height:2px;
+background:white;
+position:absolute;
+left:0;
+bottom:-4px;
+transition:0.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.menu-toggle{
+display:none;
+font-size:22px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+
+@media (max-width:768px){
+
+.menu-toggle{ display:block; }
+
+.nav-links{
+display:none;
+flex-direction:column;
+margin-top:10px;
+animation:fadeIn 0.3s ease;
+}
+
+.nav-links a{
+margin:10px 0;
+font-size:15px;
+}
+
+.nav-links.active{ display:flex; }
+
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Times New Roman", Times, serif;
+background:#f4f4f4;
+color:black;
+}
+
+.header{
+background:#D1B399;
+color:black;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+}
+
+.container{
+max-width:950px;
+margin:40px auto;
+padding:30px;
+background:#E3DFD2;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+.week-buttons{
+display:grid;
+grid-template-columns:repeat(10,1fr);
+gap:8px;
+margin-bottom:25px;
+}
+
+.week-btn{
+padding:10px;
+border:none;
+background:#B0B7AB;
+color:black;
+font-weight:bold;
+border-radius:6px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.week-btn:hover{
+background:#9EA596;
+transform:scale(1.05);
+}
+
+.week-content{
+display:none;
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+margin-top:10px;
+}
+
+.week-content p{
+margin-bottom:12px;
+line-height:1.7;
+}
+
+footer{
+background:#D1B399;
+color:black;
+text-align:center;
+padding:12px;
+margin-top:40px;
+}
+
 </style>
+
 </head>
 
 <body>
 
+<div class="header">
+INDUSTRIAL TRAINING REPORT<br>
+<span style="font-size:14px;">Diploma in Information Technology (Networking)</span>
+</div>
+
+<nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
+<div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="executive_summary.html">Executive Summary</a>
+<a href="acknowledgement.html">Acknowledgement</a>
+<a href="introduction.html">Introduction</a>
+<a href="company_background.html">Company Background</a>
+<a href="weekly_summary.html">Weekly Summary</a>
+<a href="technical_report.html">Technical Report</a>
+<a href="conclusion.html">Conclusion</a>
+</div>
+</nav>
+
 <div class="container">
 
+<h1>Weekly Summary</h1>
+
+<div class="week-buttons">
 <script>
 for(let i=1;i<=20;i++){
 document.write('<button class="week-btn" onclick="showWeek('+i+')">Week '+i+'</button>');
 }
 </script>
+</div>
 
 <div id="weekPanel" class="week-content"></div>
 
 </div>
+
+<footer>
+<p>© NUUR SHAHILA AISYAH&nbsp;&nbsp;17DDT23F1034</p>
+</footer>
 
 <script>
 
@@ -34,93 +211,55 @@ panel.style.display="block";
 
 let weeks=[
 
-let weeks=[
-
 // WEEK 1
-`<p>During the first week of industrial training, onboarding sessions were attended to gain an understanding of the company’s departments and IT processes. Basic IT support knowledge was introduced, including the use of Okta for authentication, remote access tools, password reset procedures, and account unlocking methods. The server room and various network devices were also observed to understand the company’s IT infrastructure and system management.</p>
-<p>Remote support activities were carried out, during which troubleshooting assistance was provided to users. Devices were joined to the company domain through VPN connections, and Microsoft Office upgrades were performed when required. Computer asset records were updated in Microsoft Excel to ensure accurate information. In addition, issues related to corrupted Excel files were resolved to restore user access.</p>`,
+  `<p>During the first week of industrial training, onboarding sessions were attended to gain an understanding of the company’s departments and IT processes. Basic IT support knowledge was introduced, including the use of Okta for authentication, remote access tools, password reset procedures, and account unlocking methods. The server room and several network devices were also observed to understand the company’s IT infrastructure and system management.</p>
+   <p> <p>Remote support activities were carried out, where troubleshooting assistance was provided to users. Devices were joined to the company domain through VPN connections, and Microsoft Office upgrades were performed when required. Computer asset records were also updated in Microsoft Excel to ensure that asset information remained accurate. In addition, issues related to corrupted Excel files were resolved to allow users to access their files properly.</p>`
 
 // WEEK 2
-`<p>During the second week, remote IT support tasks were carried out, including the removal of unnecessary software, updating records, and verifying asset information to maintain accurate documentation of company devices. Preparation for device disposal was also conducted by identifying unused equipment and ensuring that all required procedures were followed.</p>
-<p>Several IT support responsibilities were handled during the supervisor’s absence, providing greater exposure to daily IT operations. The company’s computer asset data was updated, and software installation for engineering staff was completed to ensure the availability of required tools. In addition, Microsoft 365 licenses were upgraded from E1 to E3 through Active Directory to provide enhanced features. Assistance was also provided in preparing an IT budget report by organizing the necessary information.</p>`,
+  `<p>During the second week, remote IT support tasks were performed, including the removal of unnecessary software, updating records, and verifying asset information to maintain accurate documentation of company devices. Preparation for device disposal was also carried out by identifying unused equipment and ensuring that required procedures were followed.</p>
+   <p>Several IT support responsibilities were handled while the supervisor was on leave, providing greater exposure to daily IT operations. The company’s computer asset data was updated to maintain accurate records. Software installation for engineering staff was also carried out to ensure that the required tools were available. In addition, Microsoft 365 licenses were upgraded from E1 to E3 through Active Directory to provide enhanced features. Assistance was also provided in preparing an IT budget report by organizing the relevant information.</p>`
 
 // WEEK 3
-`<p>During the third week, support was provided for Microsoft 365 upgrades for users located in multiple countries. The installation and activation processes were completed successfully to ensure users could access the latest features.</p>
-<p>Application issues such as PDF errors and system lagging were troubleshot and resolved. New laptops were set up for engineering staff by installing the required software and preparing the devices for immediate use. Remote system maintenance was also performed to assist users without requiring physical access. Additional software installations were carried out using command line tools, and email forwarding was configured accordingly.</p>`,
+   `<p>During the third week, support was provided for Microsoft 365 upgrades for users located in multiple countries. The installation and activation processes were ensured to be completed successfully so that users could access the latest features.</p>
+    <p>Application issues such as PDF errors and system lagging were troubleshot and resolved. New laptops were set up for engineering staff by installing the required software and preparing the devices for immediate use. Remote system maintenance was also performed to assist users without requiring physical access. Additional software installations were carried out using command-line tools, and email forwarding was configured to ensure proper email delivery.</p>`
 
 // WEEK 4
-`<p>During the fourth week, engineering software was installed on several laptops to ensure users had the necessary applications for their tasks. Microsoft 365 upgrades were also carried out to ensure users were operating on the latest version.</p>
-<p>Several software performance issues reported by users were investigated and resolved to improve system performance. Assistance was provided to users experiencing login and password issues, where password resets were performed through Active Directory. Remote support was also provided for SAP server access, and required files were transferred to assist users in completing their work.</p>`,
+    `<p>During the fourth week, engineering software was installed on several laptops to ensure that users had the necessary applications for their tasks. Microsoft 365 upgrades were also performed to ensure that users were using the latest version.</p>
+     <p>Several software performance issues reported by users were investigated and resolved to improve system performance. Assistance was provided to users experiencing login and password issues, where password resets were performed through Active Directory. Remote support was also provided for SAP server access, and required files were copied to assist users in completing their tasks.</p>`
 
 // WEEK 5
-`<p>During the fifth week, users were informed about the Microsoft 365 E3 upgrade, and installation arrangements were made to ensure a smooth transition. Several devices were joined to the company domain, and issues related to Google Drive access were resolved using Command Prompt and Group Policy configurations.</p>
-<p>Remote support was provided to users located in Singapore and India. Required software such as VPN, SAP, Zscaler, Symantec, and Qualys was installed to ensure secure system access. HTA application performance issues were investigated and resolved. Engineering software including Tilt-Up, RFEM, and Bluebeam was installed for engineering staff. Assistance was also provided for password reset requests, and laptops were prepared for new users. Local administrator passwords were retrieved when necessary for configuration and troubleshooting.</p>
-<p>In addition, Dlubal software was reinstalled for users experiencing issues. Configuration of Wi-Fi, firewall settings, and access points was also carried out for the network setup at the new office.</p>`,
+    `<p>During the fifth week, users were informed about the Microsoft 365 E3 upgrade, and installation arrangements were made to ensure a smooth upgrade process. Several devices were joined to the company domain, and issues related to Google Drive access were resolved using Command Prompt and Group Policy configurations.</p>
+     <p>Remote support was provided to users located in Singapore and India. Required software such as VPN, SAP, Zscaler, Symantec, and Qualys was installed to ensure secure system access. HTA application performance issues were also investigated and resolved. Engineering software including Tilt-Up, RFEM, and Bluebeam was installed for engineering staff. Assistance was also provided to users who required password resets. Laptops were prepared for new users, and local administrator passwords were retrieved when necessary for system configuration and troubleshooting.</p>
+     <p>In addition, Dlubal software was reinstalled for users experiencing issues with the application. Wi-Fi, firewall settings, and access points were also configured for network setup at the new office.</p>`
 
 // WEEK 6
-``,
+      `<KOOSONG JAP>`
 
 // WEEK 7
-`<p>During the seventh week, a report was prepared to identify laptops that had been used for more than three years. This report was created to assist the IT department in monitoring device lifecycle and planning future hardware replacements. A laptop for a user in Singapore was joined to the company domain and required software including SAP servers access, VPN and Okta Verify was installed to ensure proper system access and authentication.</p>
-<p>Microsoft 365 upgrades were also carried out for several users. Issues related to SAP printing were investigated and resolved to ensure that users could print documents without any problem. VPN connection issues reported by users were also checked and resolved. In addition, engineering software installations and updates were performed for engineering staff. The Windows versions of users' computer were also checked through Active Directory to ensure that the devices were running supported operating systems within the company network environment.</p>`,
+      `<p>During the seventh week, a report was prepared to identify laptops that had been used for more than three years. This report was created to assist the IT department in monitoring device lifecycle and planning future hardware replacements. A laptop for a user in Singapore was joined to the company domain, and required software including SAP server access, VPN, and Okta Verify was installed to ensure proper system access and authentication.</p>
+       <p>Microsoft 365 upgrades were also carried out for several users. Issues related to SAP printing were investigated and resolved to ensure proper functionality. VPN connection issues reported by users were also checked and resolved. In addition, engineering software installations and updates were performed. The Windows versions of users’ computers were also checked through Active Directory to ensure that supported operating systems were being used within the company network.</p>`
 
-// WEEK 8
-`<p>During the eighth week, several IT support and office related tasks were carried out. Microsoft 365 was upgraded for users located in Malaysia and India to ensure they had access to the latest features and improved system performance. In addition, Zscaler was installed and email configuration was completed for a user in Singapore to ensure secure network access and proper email functionality.</p>
-<p>Support was also provided to a user who needed assistance in setting up Okta Verify on a new mobile device. This was done to ensure that the user could continue using multi factor authentication for secure access to company systems. Besides user support tasks, hardware setup activities were also performed. Monitors were installed at the new office and the Smart Whiteboard was explored to understand its features and functions. A list of Smart Whiteboard functions was also created to assist users in utilizing the device effectively during meetings and presentations.</p>
-<p>Additionally, participation in office relocation activities took place during this week. This included cleaning the workspace, packing equipment and organizing items at the old office to prepare them for the relocation process. These activities helped ensure that the transition of the new office could be carried out smoothly and efficiently.</p>`,
+// WEEK 8 
+        `<p>During the eighth week, several IT support and office-related tasks were carried out. Microsoft 365 was upgraded for users located in Malaysia and India to ensure access to the latest features and improved performance. In addition, Zscaler was installed, and email configuration was completed for a user in Singapore to ensure secure network access and proper email functionality.</p>
+         <p>Support was also provided to a user who required assistance in setting up Okta Verify on a new mobile device. This was carried out to ensure continued use of multi-factor authentication for secure access to company systems. Hardware setup activities were also performed, including installing monitors at the new office and exploring the Smart Whiteboard to understand its features. A list of functions was created to assist users in utilizing the device effectively.</p>
+         <p>Participation in office relocation activities was also carried out. This included cleaning the workspace, packing equipment, and organizing items at the old office to prepare for relocation. These activities ensured a smooth and efficient transition to the new office.</p>`
 
-// WEEK 9
-`<p>During the ninth week, a range of system support and technical activities were carried out to ensure smooth daily operations. A presentation on Smart TV usage was delivered to provide guidance to users on how the device could be utilized effectively for meetings and presentations.</p>
-<p>Printer drivers were installed and multiple user issues were resolved, including login problems, Google Drive access issues, and laptop performance concerns. Active Directory updates were also performed following office relocation.</p>
-<p>Network and system troubleshooting activities were conducted, including checking server connectivity and removing old user profiles. Overall, system performance was improved and user accessibility was ensured.</p>`,
+          
+      `
 
-// WEEK 10
-`<p>During the tenth week, multiple system maintenance activities were performed to maintain system stability. Microsoft 365 upgrades were carried out and email backups were completed.</p>
-<p>Software issues involving HTA, Word, and Adobe were resolved, while SAP printing problems were fixed to ensure uninterrupted operations.</p>
-<p>Server migration testing was also conducted to verify system performance and reliability.</p>`,
+"9.","10.","11.","12.","13.","14.","15.","16.","17.","18.","19.","20."
 
-// WEEK 11
-`<p>During the eleventh week, software installation tasks were carried out to support engineering users. Applications such as AutoCAD, Bluebeam, and Prokon were installed.</p>
-<p>System performance issues were resolved, and access-related problems involving Zscaler and Google Drive were handled.</p>
-<p>SAP printer configuration issues were also fixed to restore printing functionality.</p>`,
-
-// WEEK 12
-`<p>During the twelfth week, system configuration and user support activities were performed. Active Directory updates and Microsoft 365 upgrades were completed.</p>
-<p>Domain joining issues and VPN problems were resolved, and software installations were carried out.</p>
-<p>Additional troubleshooting ensured proper system functionality and user accessibility.</p>`,
-
-// WEEK 13
-`<p>During the thirteenth week, troubleshooting and system support activities were carried out to maintain operational efficiency.</p>
-<p>VPN and HTA issues were resolved, while software installations and password resets were completed.</p>
-<p>Cloud-related issues and SAP access configurations were also handled successfully.</p>`,
-
-// WEEK 14
-`<p>During the fourteenth week, system setup and troubleshooting tasks were undertaken. Laptops were configured and security tools were installed.</p>
-<p>Network issues, printer problems, and system performance concerns were resolved.</p>
-<p>Vendor coordination and administrative updates were also carried out.</p>`,
-
-// WEEK 15
-`<p>During the fifteenth week, system deployment and access management activities were conducted. Devices were built and joined to the domain.</p>
-<p>Software issues were resolved and printer installations were completed.</p>
-<p>System readiness and user accessibility were improved.</p>`,
-
-// WEEK 16
-`<p>During the sixteenth week, device preparation and deployment tasks were carried out. Laptops were configured and system images were installed.</p>
-<p>Hardware and software issues were resolved, and system updates were performed.</p>
-<p>Administrative and planning activities were also completed to ensure readiness.</p>`,
-
-// WEEK 17 
-`<p>During this week, various IT support and system deployment tasks were carried out to ensure devices were properly configured and ready for use. New laptops were prepared by building system images manually and installing required security tools such as Zscaler, Qualys, Symantec, and VPN. In addition, engineering software including Bluebeam, Job Board, and Tilt-Up was installed to support user work requirements.</p>
-<p>Several troubleshooting tasks were also performed during this week. SAP performance issues were resolved by addressing system lagging, and Bluetooth audio problems were fixed where devices were connected but no sound was produced. Additional software such as Click-to-Ship was also installed to meet operational needs.</p>
-<p>Furthermore, system maintenance activities were carried out, including reinstalling software for engineering staff and reformatting a Surface device to restore system performance and prepare it for reuse. Overall, these activities improved system readiness, enhanced device performance, and strengthened technical skills in deployment, troubleshooting, and system maintenance.</p>`,
-
-// WEEK 18–20 kosong
-``,``,``
 ];
 
 panel.innerHTML="<h2>Week "+week+"</h2>"+weeks[week-1];
 
 }
+
+function toggleMenu(){
+var menu=document.getElementById("navLinks");
+menu.classList.toggle("active");
+}
+
 </script>
 
 </body>
