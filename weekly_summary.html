@@ -5,31 +5,215 @@
 
 <style>
 
-/* ===== TAMBAHAN GAMBAR ===== */
-.image-row{
-display:flex;
-gap:10px;
-margin-top:15px;
+/* =========================
+RESET
+========================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.image-box{
-flex:1;
+/* =========================
+BODY
+========================= */
+body{
+font-family:"Times New Roman", Times, serif;
+background:#f4f4f4;
+color:black;
+}
+
+/* =========================
+HEADER
+========================= */
+.header{
+background:#D1B399;
+color:black;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+/* =========================
+NAVBAR
+========================= */
+nav{
+background:#D1B399;
+padding:15px;
+text-align:center;
+position:relative;
+}
+
+.nav-links{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+position:relative;
+}
+
+.nav-links a::after{
+content:"";
+width:0%;
+height:2px;
+background:white;
+position:absolute;
+left:0;
+bottom:-4px;
+transition:0.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.menu-toggle{
+display:none;
+font-size:22px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+margin-top:10px;
+animation:fadeIn 0.3s ease;
+}
+
+.nav-links a{
+margin:10px 0;
+font-size:15px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* =========================
+CONTAINER
+========================= */
+.container{
+max-width:900px;
+margin:40px auto;
+padding:30px;
+background:#E3DFD2;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* =========================
+PAGE TITLE
+========================= */
+.page-title{
+font-size:26px;
+text-align:center;
+margin-bottom:25px;
+font-weight:bold;
+}
+
+/* =========================
+WEEK BUTTONS
+========================= */
+.week-buttons{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+gap:10px;
+margin-bottom:25px;
+}
+
+.week-btn{
+padding:12px;
+background:#B0B7AB;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+font-family:"Times New Roman";
+}
+
+.week-btn:hover{
+background:#9EA596;
+transform:translateY(-2px);
+}
+
+/* =========================
+WEEK CONTENT
+========================= */
+.week-content{
+display:none;
+background:white;
+padding:25px;
+margin-top:10px;
+border-radius:6px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+text-align:justify;
+animation:fadeIn 0.3s ease;
+}
+
+.week-content h2{
+margin-bottom:20px;
+text-align:center;
+font-size:24px;
+}
+
+.week-content p{
+font-size:15px;
+line-height:1.7;
+margin-bottom:15px;
+}
+
+/* =========================
+IMAGE ROW
+========================= */
+.image-row{
+display:flex;
+gap:12px;
+margin-top:20px;
+flex-wrap:wrap;
 }
 
 .image-row img{
 width:100%;
-height:150px;
+height:180px;
 object-fit:cover;
 border-radius:6px;
 cursor:pointer;
 transition:0.3s;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+flex:1;
 }
 
 .image-row img:hover{
-transform:scale(1.08);
+transform:scale(1.05);
 }
 
-/* popup */
+/* =========================
+POPUP
+========================= */
 .popup{
 display:none;
 position:fixed;
@@ -37,73 +221,63 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.85);
 justify-content:center;
 align-items:center;
 z-index:999;
+padding:20px;
 }
 
 .popup img{
-max-width:80%;
-max-height:80%;
+max-width:85%;
+max-height:85%;
 border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
 .popup span{
 position:absolute;
 top:20px;
 right:30px;
-font-size:30px;
+font-size:35px;
 color:white;
 cursor:pointer;
-}
-
-/* ===== ORIGINAL ===== */
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-font-family:"Times New Roman";
-background:#f4f4f4;
-}
-
-.header{
-background:#D1B399;
-text-align:center;
-padding:15px;
-font-size:24px;
 font-weight:bold;
 }
 
+/* =========================
+FOOTER
+========================= */
+footer{
+background:#D1B399;
+color:black;
+text-align:center;
+padding:12px;
+margin-top:40px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@media (max-width:768px){
+
 .container{
-max-width:950px;
-margin:40px auto;
-padding:30px;
-background:#E3DFD2;
+margin:20px;
+padding:20px;
 }
 
-.week-buttons{
-display:grid;
-grid-template-columns:repeat(10,1fr);
-gap:8px;
-margin-bottom:20px;
+.image-row{
+flex-direction:column;
 }
 
-.week-btn{
-padding:10px;
-background:#B0B7AB;
-border:none;
-cursor:pointer;
+.image-row img{
+height:auto;
 }
 
 .week-content{
-display:none;
-background:white;
-padding:20px;
-margin-top:10px;
+padding:18px;
 }
 
-.week-content p{
-margin-bottom:12px;
 }
 
 </style>
@@ -112,17 +286,43 @@ margin-bottom:12px;
 <body>
 
 <div class="header">
-INDUSTRIAL TRAINING REPORT
+INDUSTRIAL TRAINING REPORT<br>
+<span style="font-size:14px;">
+Diploma in Information Technology (Networking)
+</span>
 </div>
+
+<nav>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
+<div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="executive_summary.html">Executive Summary</a>
+<a href="acknowledgement.html">Acknowledgement</a>
+<a href="introduction.html">Introduction</a>
+<a href="company_background.html">Company Background</a>
+<a href="weekly_summary.html">Weekly Summary</a>
+<a href="technical_report.html">Technical Report</a>
+<a href="conclusion.html">Conclusion</a>
+</div>
+
+</nav>
 
 <div class="container">
 
+<h1 class="page-title">Weekly Summary</h1>
+
 <div class="week-buttons">
+
 <script>
 for(let i=1;i<=20;i++){
-document.write('<button class="week-btn" onclick="showWeek('+i+')">Week '+i+'</button>');
+document.write(
+'<button class="week-btn" onclick="showWeek('+i+')">Week '+i+'</button>'
+);
 }
 </script>
+
 </div>
 
 <div id="weekPanel" class="week-content"></div>
@@ -135,8 +335,23 @@ document.write('<button class="week-btn" onclick="showWeek('+i+')">Week '+i+'</b
 <img id="popupImg">
 </div>
 
+<footer>
+<p> ©️ [NUUR SHAHILA AISYAH]&nbsp;&nbsp;[17DDT23F1034]</p>
+</footer>
+
 <script>
 
+/* =========================
+NAV MENU
+========================= */
+function toggleMenu(){
+var menu=document.getElementById("navLinks");
+menu.classList.toggle("active");
+}
+
+/* =========================
+IMAGE POPUP
+========================= */
 function showPopup(src){
 document.getElementById("popup").style.display="flex";
 document.getElementById("popupImg").src=src;
@@ -146,6 +361,9 @@ function closePopup(){
 document.getElementById("popup").style.display="none";
 }
 
+/* =========================
+WEEK DATA
+========================= */
 let weeks=[
 
 // WEEK 1
@@ -327,11 +545,21 @@ let weeks=[
 </div>`,
   
 ];
-
+  
 function showWeek(week){
+
 let panel=document.getElementById("weekPanel");
+
 panel.style.display="block";
-panel.innerHTML="<h2>Week "+week+"</h2>"+(weeks[week-1]||"");
+
+panel.innerHTML=
+"<h2>Week "+week+"</h2>"+(weeks[week-1]||"");
+
+window.scrollTo({
+top:panel.offsetTop-100,
+behavior:"smooth"
+});
+
 }
 
 </script>
