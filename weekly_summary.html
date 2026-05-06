@@ -122,11 +122,17 @@ font-weight:bold;
 
 .week-buttons{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+grid-template-columns:repeat(10,1fr);
 gap:10px;
 margin-bottom:25px;
 }
 
+@media (max-width:768px){
+  .week-buttons{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+  
 .week-btn{
 padding:12px;
 background:#B0B7AB;
