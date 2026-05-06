@@ -5,27 +5,18 @@
 
 <style>
 
-/* =========================
-RESET
-========================= */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-/* =========================
-BODY
-========================= */
 body{
 font-family:"Times New Roman", Times, serif;
 background:#f4f4f4;
 color:black;
 }
 
-/* =========================
-HEADER
-========================= */
 .header{
 background:#D1B399;
 color:black;
@@ -36,9 +27,7 @@ font-weight:bold;
 letter-spacing:1px;
 }
 
-/* =========================
-NAVBAR
-========================= */
+
 nav{
 background:#D1B399;
 padding:15px;
@@ -112,9 +101,7 @@ from{opacity:0;}
 to{opacity:1;}
 }
 
-/* =========================
-CONTAINER
-========================= */
+
 .container{
 max-width:900px;
 margin:40px auto;
@@ -124,9 +111,7 @@ border-radius:8px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* =========================
-PAGE TITLE
-========================= */
+
 .page-title{
 font-size:26px;
 text-align:center;
@@ -134,9 +119,7 @@ margin-bottom:25px;
 font-weight:bold;
 }
 
-/* =========================
-WEEK BUTTONS
-========================= */
+
 .week-buttons{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
@@ -160,9 +143,7 @@ background:#9EA596;
 transform:translateY(-2px);
 }
 
-/* =========================
-WEEK CONTENT
-========================= */
+
 .week-content{
 display:none;
 background:white;
@@ -186,9 +167,6 @@ line-height:1.7;
 margin-bottom:15px;
 }
 
-/* =========================
-IMAGE ROW
-========================= */
 .image-row{
 display:flex;
 gap:12px;
@@ -211,9 +189,7 @@ flex:1;
 transform:scale(1.05);
 }
 
-/* =========================
-POPUP
-========================= */
+
 .popup{
 display:none;
 position:fixed;
@@ -245,9 +221,6 @@ cursor:pointer;
 font-weight:bold;
 }
 
-/* =========================
-FOOTER
-========================= */
 footer{
 background:#D1B399;
 color:black;
@@ -256,9 +229,6 @@ padding:12px;
 margin-top:40px;
 }
 
-/* =========================
-RESPONSIVE
-========================= */
 @media (max-width:768px){
 
 .container{
@@ -341,17 +311,11 @@ document.write(
 
 <script>
 
-/* =========================
-NAV MENU
-========================= */
 function toggleMenu(){
 var menu=document.getElementById("navLinks");
 menu.classList.toggle("active");
 }
 
-/* =========================
-IMAGE POPUP
-========================= */
 function showPopup(src){
 document.getElementById("popup").style.display="flex";
 document.getElementById("popupImg").src=src;
@@ -361,9 +325,7 @@ function closePopup(){
 document.getElementById("popup").style.display="none";
 }
 
-/* =========================
-WEEK DATA
-========================= */
+
 let weeks=[
 
 // WEEK 1
