@@ -5,8 +5,6 @@
 
 <style>
 
-  
-
 nav{
 background:#D1B399;
 padding:15px;
@@ -28,7 +26,6 @@ font-weight:bold;
 position:relative;
 }
 
-
 .nav-links a::after{
 content:"";
 width:0%;
@@ -44,7 +41,6 @@ transition:0.3s;
 width:100%;
 }
 
-
 .menu-toggle{
 display:none;
 font-size:22px;
@@ -52,7 +48,6 @@ color:white;
 font-weight:bold;
 cursor:pointer;
 }
-
 
 @media (max-width:768px){
 
@@ -150,21 +145,38 @@ margin-bottom:15px;
 line-height:1.7;
 }
 
-/* ADD BUTTON STYLE */
-.image-btn{
-display:inline-block;
-margin-bottom:20px;
-padding:10px 18px;
-background:#D1B399;
-color:black;
-text-decoration:none;
-border-radius:8px;
+/* IMAGE SECTION */
+
+.technical-gallery{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+margin-top:20px;
+margin-bottom:35px;
+}
+
+.technical-item{
+width:250px;
+text-align:center;
+}
+
+.technical-item p{
+font-size:15px;
 font-weight:bold;
+margin-bottom:10px;
+}
+
+.technical-item img{
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 transition:0.3s;
 }
 
-.image-btn:hover{
-background:#b89578;
+.technical-item img:hover{
 transform:scale(1.03);
 }
 
@@ -188,7 +200,8 @@ INDUSTRIAL TRAINING REPORT<br>
 </div>
 
 <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
 <div class="nav-links" id="navLinks">
 <a href="index.html">Home</a>
 <a href="executive_summary.html">Executive Summary</a>
@@ -206,54 +219,119 @@ INDUSTRIAL TRAINING REPORT<br>
 <h1>Technical Report</h1>
 
 <h2>Laptop Deployment & Imaging</h2>
+
 <p>
 During the industrial training period, laptop deployment and imaging activities were carried out to prepare devices for company users. The process included installing operating systems, rebuilding system images, joining laptops into the company domain, and configuring user settings. Active Directory was also used to create and manage computer objects to ensure proper integration within the company network environment. These tasks helped improve understanding of enterprise deployment procedures and device management processes.
 </p>
 
-<a href="images/laptop-deployment.jpg" target="_blank" class="image-btn">
-See Image
-</a>
+<div class="technical-gallery">
+
+<div class="technical-item">
+<p>Laptop deployment process.</p>
+<img src="images/laptop1.jpg">
+</div>
+
+<div class="technical-item">
+<p>System imaging activity.</p>
+<img src="images/laptop2.jpg">
+</div>
+
+<div class="technical-item">
+<p>Domain configuration setup.</p>
+<img src="images/laptop3.jpg">
+</div>
+
+</div>
+
 
 <h2>Software Installation & Configuration</h2>
+
 <p>
 Various software installations and configurations were performed based on user requirements and company standards. Applications such as Microsoft 365, SAP Business One, Tekla Structures, Revit, and EXQL Reporting tools were installed and configured accordingly. In addition, security software including Zscaler, Symantec Endpoint Protection, VPN clients, and Qualys were deployed to ensure secure system access and compliance with company security policies. This experience enhanced technical skills in software management and enterprise application support.
 </p>
 
-<a href="images/software-installation.jpg" target="_blank" class="image-btn">
-See Image
-</a>
+<div class="technical-gallery">
+
+<div class="technical-item">
+<p>Microsoft 365 installation.</p>
+<img src="images/software1.jpg">
+</div>
+
+<div class="technical-item">
+<p>SAP system configuration.</p>
+<img src="images/software2.jpg">
+</div>
+
+<div class="technical-item">
+<p>Software setup activities.</p>
+<img src="images/software3.jpg">
+</div>
+
+</div>
+
 
 <h2>Troubleshooting & Technical Support</h2>
+
 <p>
 Troubleshooting activities were frequently conducted to resolve hardware, software, and network-related issues faced by users. Problems such as Wi-Fi connectivity issues, keyboard malfunctions, SAP printing errors, RDP connection failures, SCCM imaging errors, and dongle connection problems were investigated and resolved using suitable troubleshooting methods. Remote support and direct technical assistance were also provided to users to ensure minimal disruption to daily operations. These activities strengthened problem-solving and analytical skills in handling real-world IT support situations.
 </p>
 
-<a href="images/troubleshooting.jpg" target="_blank" class="image-btn">
-See Image
-</a>
+<div class="technical-gallery">
+
+<div class="technical-item">
+<p>Technical troubleshooting support.</p>
+<img src="images/troubleshoot1.jpg">
+</div>
+
+<div class="technical-item">
+<p>System error checking.</p>
+<img src="images/troubleshoot2.jpg">
+</div>
+
+<div class="technical-item">
+<p>User support assistance.</p>
+<img src="images/troubleshoot3.jpg">
+</div>
+
+</div>
+
 
 <h2>Printer & Network Configuration</h2>
+
 <p>
 Printer and network configuration tasks were also performed throughout the internship period. These included configuring colour printing permissions, managing print server settings, adjusting duplex printing options, and supporting SAP print configurations for users. Network-related tasks such as checking connectivity issues, configuring wireless access, and supporting VPN connections were also carried out. Through these responsibilities, practical exposure to network support and printer management within an enterprise environment was successfully gained.
 </p>
 
-<a href="images/printer-network.jpg" target="_blank" class="image-btn">
-See Image
-</a>
+<div class="technical-gallery">
+
+<div class="technical-item">
+<p>Printer configuration setup.</p>
+<img src="images/network1.jpg">
+</div>
+
+<div class="technical-item">
+<p>Network connectivity support.</p>
+<img src="images/network2.jpg">
+</div>
+
+<div class="technical-item">
+<p>Print server management.</p>
+<img src="images/network3.jpg">
+</div>
+
+</div>
 
 </div>
 
 <footer>
-<p>©  [NUUR SHAHILA AISYAH]&nbsp;&nbsp;[17DDT23F1034]</p>
+<p>© [NUUR SHAHILA AISYAH] &nbsp;&nbsp; [17DDT23F1034]</p>
 </footer>
 
 <script>
 
 function toggleMenu(){
 var menu=document.getElementById("navLinks");
-
 menu.classList.toggle("active");
-
 }
 
 </script>
