@@ -1,33 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Industrial Training Report - Conclusion</title>
 
 <style>
 
-  
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Times New Roman", Times, serif;
+background-color:#f4f4f4;
+color:black;
+}
+
+/* HEADER */
+
+.header{
+background:#D1B399;
+color:black;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+/* NAVIGATION */
 
 nav{
 background:#D1B399;
 padding:15px;
-text-align:center;
 position:relative;
+text-align:center;
 }
 
 .nav-links{
 display:flex;
 justify-content:center;
+align-items:center;
 flex-wrap:wrap;
+gap:20px;
 }
 
 .nav-links a{
 color:white;
-margin:0 15px;
 text-decoration:none;
 font-weight:bold;
 position:relative;
+font-size:15px;
 }
-
 
 .nav-links a::after{
 content:"";
@@ -44,58 +72,58 @@ transition:0.3s;
 width:100%;
 }
 
-
-
 .menu-toggle{
 display:none;
-font-size:22px;
+font-size:24px;
 color:white;
 font-weight:bold;
 cursor:pointer;
-}
-
-
-
-@media (max-width:768px){
-
-.menu-toggle{
-display:block;
-}
-
-.nav-links{
-display:none;
-flex-direction:column;
-margin-top:10px;
-animation:fadeIn 0.3s ease;
-}
-
-.nav-links a{
-margin:10px 0;
-font-size:15px;
-}
-
-.nav-links.active{
-display:flex;
-}
-
+text-align:left;
 }
 
 @keyframes fadeIn{
 from{opacity:0;}
 to{opacity:1;}
 }
-  
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+/* CONTAINER */
+
+.container{
+max-width:900px;
+margin:40px auto;
+padding:30px;
+background:#E3DFD2;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:justify;
 }
 
-body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: #f4f4f4;
-  color: black;
+h1{
+font-size:26px;
+color:black;
+margin-bottom:20px;
+text-align:center;
 }
+
+p{
+font-size:15px;
+margin-bottom:15px;
+line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+background:#D1B399;
+color:black;
+text-align:center;
+padding:12px;
+margin-top:40px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
 
 .header{
 background:#D1B399;
@@ -107,52 +135,50 @@ font-weight:bold;
 letter-spacing:1px;
 }
 
-nav {
-  background: #D1B399;
-  padding: 12px;
-  text-align: center;
+.header span{
+font-size:14px !important;
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
+.menu-toggle{
+display:block;
+padding-left:10px;
+text-align:left;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav-links{
+display:none;
+flex-direction:column;
+background:#D1B399;
+margin-top:15px;
+padding:10px 0;
+border-radius:8px;
+animation:fadeIn 0.3s ease;
 }
 
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #E3DFD2; /* Oyster */
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: justify;
+.nav-links.active{
+display:flex;
 }
 
-h1 {
-  font-size: 26px;
-  color: black;
-  margin-bottom: 20px;
-  text-align: center;
+.nav-links a{
+padding:10px;
+font-size:16px;
 }
 
-p {
-  font-size: 15px;
-  margin-bottom: 15px;
-  line-height: 1.7;
+.container{
+width:92%;
+margin:25px auto;
+padding:20px;
 }
 
-footer {
-  background: #D1B399;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  margin-top: 40px;
+h1{
+font-size:22px;
+}
+
+p{
+font-size:14px;
+line-height:1.8;
+}
+
 }
 
 </style>
@@ -167,39 +193,53 @@ INDUSTRIAL TRAINING REPORT<br>
 </div>
 
 <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
 <div class="nav-links" id="navLinks">
-  <a href="index.html">Home</a>
-  <a href="executive_summary.html">Executive Summary</a>
-  <a href="acknowledgement.html">Acknowledgement</a>
-  <a href="introduction.html">Introduction</a>
-  <a href="company_background.html">Company Background</a>
-  <a href="weekly_summary.html">Weekly Summary</a>
-  <a href="technical_report.html">Technical Report</a>
-  <a href="conclusion.html">Conclusion</a>
+<a href="index.html">Home</a>
+<a href="executive_summary.html">Executive Summary</a>
+<a href="acknowledgement.html">Acknowledgement</a>
+<a href="introduction.html">Introduction</a>
+<a href="company_background.html">Company Background</a>
+<a href="weekly_summary.html">Weekly Summary</a>
+<a href="technical_report.html">Technical Report</a>
+<a href="conclusion.html">Conclusion</a>
 </div>
+
 </nav>
 
 <div class="container">
-  <h1>Conclusion</h1>
 
-  <p>In conclusion, the industrial training successfully provided valuable exposure to the real working environment in the field of Information Technology support and system administration. Throughout the internship period, various technical tasks and troubleshooting activities were carried out, allowing practical knowledge gained during academic studies to be applied in real situations.</p>
-  <p>The training experience improved technical skills in laptop deployment, software installation, Active Directory management, network troubleshooting, printer configuration, and enterprise system support. In addition, communication and problem-solving skills were strengthened through interactions with users and team members while resolving technical issues efficiently.</p>
-  <p>Furthermore, the internship enhanced understanding of workplace responsibilities, teamwork, time management, and professional ethics required in the IT industry. The opportunity to work with enterprise-level systems and support tools also increased confidence in handling technical operations and user support tasks.</p>
-  <p>Overall, this industrial training program was highly beneficial in developing both technical and interpersonal skills, while also preparing for future career opportunities in the Information Technology field.</p>
+<h1>Conclusion</h1>
+
+<p>
+In conclusion, the industrial training successfully provided valuable exposure to the real working environment in the field of Information Technology support and system administration. Throughout the internship period, various technical tasks and troubleshooting activities were carried out, allowing practical knowledge gained during academic studies to be applied in real situations.
+</p>
+
+<p>
+The training experience improved technical skills in laptop deployment, software installation, Active Directory management, network troubleshooting, printer configuration, and enterprise system support. In addition, communication and problem-solving skills were strengthened through interactions with users and team members while resolving technical issues efficiently.
+</p>
+
+<p>
+Furthermore, the internship enhanced understanding of workplace responsibilities, teamwork, time management, and professional ethics required in the IT industry. The opportunity to work with enterprise-level systems and support tools also increased confidence in handling technical operations and user support tasks.
+</p>
+
+<p>
+Overall, this industrial training program was highly beneficial in developing both technical and interpersonal skills, while also preparing for future career opportunities in the Information Technology field.
+</p>
+
 </div>
 
 <footer>
-  <p>© [NUUR SHAHILA AISYAH]&nbsp;&nbsp;[7DDT23F1034]</p>
+<p>©️ [NUUR SHAHILA AISYAH] &nbsp;&nbsp; [17DDT23F1034]</p>
 </footer>
 
-  <script>
+<script>
 
 function toggleMenu(){
 var menu=document.getElementById("navLinks");
-
 menu.classList.toggle("active");
-
 }
 
 </script>
