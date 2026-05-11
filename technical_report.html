@@ -1,9 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Industrial Training Report - Technical Report</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Times New Roman", Times, serif;
+background:#f4f4f4;
+color:black;
+}
+
+/* HEADER */
+
+.header{
+background:#D1B399;
+color:black;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+/* NAVIGATION */
 
 nav{
 background:#D1B399;
@@ -15,15 +44,17 @@ position:relative;
 .nav-links{
 display:flex;
 justify-content:center;
+align-items:center;
 flex-wrap:wrap;
+gap:20px;
 }
 
 .nav-links a{
 color:white;
-margin:0 15px;
 text-decoration:none;
 font-weight:bold;
 position:relative;
+font-size:15px;
 }
 
 .nav-links a::after{
@@ -43,78 +74,19 @@ width:100%;
 
 .menu-toggle{
 display:none;
-font-size:22px;
+font-size:24px;
 color:white;
 font-weight:bold;
 cursor:pointer;
-}
-
-@media (max-width:768px){
-
-.menu-toggle{
-display:block;
-}
-
-.nav-links{
-display:none;
-flex-direction:column;
-margin-top:10px;
-animation:fadeIn 0.3s ease;
-}
-
-.nav-links a{
-margin:10px 0;
-font-size:15px;
-}
-
-.nav-links.active{
-display:flex;
-}
-
+text-align:left;
 }
 
 @keyframes fadeIn{
 from{opacity:0;}
 to{opacity:1;}
 }
-  
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
 
-body{
-font-family:"Times New Roman", Times, serif;
-background:#f4f4f4;
-color:black;
-}
-
-.header{
-background:#D1B399;
-color:black;
-text-align:center;
-padding:15px;
-font-size:24px;
-font-weight:bold;
-}
-
-nav{
-background:#D1B399;
-padding:10px;
-text-align:center;
-}
-
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-text-decoration:underline;
-}
+/* CONTAINER */
 
 .container{
 max-width:900px;
@@ -180,12 +152,92 @@ transition:0.3s;
 transform:scale(1.03);
 }
 
+/* FOOTER */
+
 footer{
 background:#D1B399;
 color:black;
 text-align:center;
 padding:12px;
 margin-top:40px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+.header{
+background:#D1B399;
+color:black;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.header span{
+font-size:14px !important;
+}
+
+.menu-toggle{
+display:block;
+padding-left:10px;
+text-align:left;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:#D1B399;
+margin-top:15px;
+padding:10px 0;
+border-radius:8px;
+animation:fadeIn 0.3s ease;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links a{
+padding:10px;
+font-size:16px;
+}
+
+.container{
+width:92%;
+margin:25px auto;
+padding:20px;
+}
+
+h1{
+font-size:22px;
+}
+
+h2{
+font-size:20px;
+}
+
+p{
+font-size:14px;
+line-height:1.8;
+}
+
+.technical-gallery{
+flex-direction:column;
+align-items:center;
+}
+
+.technical-item{
+width:100%;
+max-width:320px;
+}
+
+.technical-item img{
+height:200px;
+}
+
 }
 
 </style>
@@ -200,6 +252,7 @@ INDUSTRIAL TRAINING REPORT<br>
 </div>
 
 <nav>
+
 <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
 
 <div class="nav-links" id="navLinks">
@@ -212,6 +265,7 @@ INDUSTRIAL TRAINING REPORT<br>
 <a href="technical_report.html">Technical Report</a>
 <a href="conclusion.html">Conclusion</a>
 </div>
+
 </nav>
 
 <div class="container">
@@ -243,7 +297,6 @@ During the industrial training period, laptop deployment and imaging activities 
 
 </div>
 
-
 <h2>Software Installation & Configuration</h2>
 
 <p>
@@ -269,7 +322,6 @@ Various software installations and configurations were performed based on user r
 
 </div>
 
-
 <h2>Troubleshooting & Technical Support</h2>
 
 <p>
@@ -294,7 +346,6 @@ Troubleshooting activities were frequently conducted to resolve hardware, softwa
 </div>
 
 </div>
-
 
 <h2>Printer & Network Configuration</h2>
 
@@ -324,7 +375,7 @@ Printer and network configuration tasks were also performed throughout the inter
 </div>
 
 <footer>
-<p>© [NUUR SHAHILA AISYAH] &nbsp;&nbsp; [17DDT23F1034]</p>
+<p>©️ [NUUR SHAHILA AISYAH] &nbsp;&nbsp; [17DDT23F1034]</p>
 </footer>
 
 <script>
