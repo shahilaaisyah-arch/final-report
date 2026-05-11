@@ -152,6 +152,39 @@ transition:0.3s;
 transform:scale(1.03);
 }
 
+/* POPUP IMAGE */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+justify-content:center;
+align-items:center;
+z-index:999;
+padding:20px;
+}
+
+.popup img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+.popup span{
+position:absolute;
+top:20px;
+right:30px;
+font-size:35px;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
+  
 /* FOOTER */
 
 footer{
@@ -282,17 +315,17 @@ During the industrial training period, laptop deployment and imaging activities 
 
 <div class="technical-item">
 <p>Laptop deployment process.</p>
-<img src="image/laptop1.png">
+<img src="image/laptop1.png" onclick="showPopup(this.src)">
 </div>
 
 <div class="technical-item">
 <p>System imaging activity.</p>
-<img src="image/laptop2.png">
+<img src="image/laptop2.png" onclick="showPopup(this.src)">
 </div>
 
 <div class="technical-item">
 <p>Domain configuration setup.</p>
-<img src="image/laptop3.png">
+<img src="image/laptop3.png" onclick="showPopup(this.src)">
 </div>
 
 </div>
@@ -307,17 +340,17 @@ Various software installations and configurations were performed based on user r
 
 <div class="technical-item">
 <p>Microsoft 365 installation.</p>
-<img src="image/software1.png">
+<img src="image/software1.png" onclick="showPopup(this.src)">
 </div>
 
 <div class="technical-item">
 <p>SAP system configuration.</p>
-<img src="image/software2.png">
+<img src="image/software2.png" onclick="showPopup(this.src)">
 </div>
 
 <div class="technical-item">
 <p>Software setup activities.</p>
-<img src="image/software3.png">
+<img src="image/software3.png" onclick="showPopup(this.src)">
 </div>
 
 </div>
@@ -332,17 +365,17 @@ Troubleshooting activities were frequently conducted to resolve hardware, softwa
 
 <div class="technical-item">
 <p>Technical troubleshooting support.</p>
-<img src="image/troubleshoot1.png">
+<img src="image/troubleshoot1.png" onclick="showPopup(this.src)">
 </div>
 
 <div class="technical-item">
 <p>System error checking.</p>
-<img src="image/troubleshoot2.png">
+<img src="image/troubleshoot2.png" onclick="showPopup(this.src)">
 </div>
 
 <div class="technical-item">
 <p>User support assistance.</p>
-<img src="image/troubleshoot3.png">
+<img src="image/troubleshoot3.png" onclick="showPopup(this.src)">
 </div>
 
 </div>
@@ -357,23 +390,47 @@ Printer and network configuration tasks were also performed throughout the inter
 
 <div class="technical-item">
 <p>Printer configuration setup.</p>
-<img src="image/network1.png">
+<img src="image/network1.png" onclick="showPopup(this.src)">
 </div>
 
 <div class="technical-item">
 <p>Network connectivity support.</p>
-<img src="image/network2.png">
+<img src="image/network2.png" onclick="showPopup(this.src)">
 </div>
 
 <div class="technical-item">
 <p>Print server management.</p>
-<img src="image/network3.png">
+<img src="image/network3.png" onclick="showPopup(this.src)">
 </div>
 
 </div>
 
 </div>
 
+<!-- POPUP -->
+<div id="popup" class="popup">
+<span onclick="closePopup()">×</span>
+<img id="popupImg">
+</div>
+
+<script>
+
+function toggleMenu(){
+var menu=document.getElementById("navLinks");
+menu.classList.toggle("active");
+}
+
+function showPopup(src){
+document.getElementById("popup").style.display="flex";
+document.getElementById("popupImg").src=src;
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
+  
 <footer>
 <p>© [NUUR SHAHILA AISYAH] &nbsp;&nbsp; [17DDT23F1034]</p>
 </footer>
