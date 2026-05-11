@@ -1,33 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Industrial Training Report - Company Background</title>
 
 <style>
 
-  
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Times New Roman", Times, serif;
+background-color:#f4f4f4;
+color:black;
+}
+
+/* HEADER */
+
+.header{
+background:#D1B399;
+color:black;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+/* NAVIGATION */
 
 nav{
 background:#D1B399;
 padding:15px;
-text-align:center;
 position:relative;
+text-align:center;
 }
 
 .nav-links{
 display:flex;
 justify-content:center;
+align-items:center;
 flex-wrap:wrap;
+gap:20px;
 }
 
 .nav-links a{
 color:white;
-margin:0 15px;
 text-decoration:none;
 font-weight:bold;
 position:relative;
+font-size:15px;
 }
-
 
 .nav-links a::after{
 content:"";
@@ -44,113 +72,51 @@ transition:0.3s;
 width:100%;
 }
 
-
 .menu-toggle{
 display:none;
-font-size:22px;
+font-size:24px;
 color:white;
 font-weight:bold;
 cursor:pointer;
+text-align:left;
 }
 
+/* CONTAINER */
 
-
-@media (max-width:768px){
-
-.menu-toggle{
-display:block;
+.container{
+max-width:900px;
+margin:40px auto;
+padding:30px;
+background:#E3DFD2;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:justify;
 }
 
-.nav-links{
-display:none;
-flex-direction:column;
-margin-top:10px;
-animation:fadeIn 0.3s ease;
-}
-
-.nav-links a{
-margin:10px 0;
-font-size:15px;
-}
-
-.nav-links.active{
-display:flex;
-}
-
-}
-
-@keyframes fadeIn{
-from{opacity:0;}
-to{opacity:1;}
-}
-  
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: #f4f4f4;
-  color: black;
-}
-
-.header{
-background:#D1B399;
+h1{
+font-size:26px;
 color:black;
+margin-bottom:20px;
 text-align:center;
-padding:15px;
-font-size:24px;
-font-weight:bold;
-letter-spacing:1px;
-}
-
-nav {
-  background: #D1B399;
-  padding: 12px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #E3DFD2;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: justify;
-}
-
-h1 {
-  font-size: 26px;
-  color: black;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 h2{
-  margin-top:20px;
-  margin-bottom:10px;
-  color:black;
+margin-top:20px;
+margin-bottom:10px;
+color:black;
 }
 
-p {
-  font-size: 15px;
-  margin-bottom: 15px;
-  line-height: 1.7;
+p{
+font-size:15px;
+margin-bottom:15px;
+line-height:1.7;
 }
+
+strong{
+color:black;
+}
+
+/* COMPANY LOGO */
 
 .company-logo{
 text-align:center;
@@ -160,6 +126,8 @@ margin-bottom:20px;
 .company-logo img{
 max-width:200px;
 }
+
+/* MAP IMAGE */
 
 .map-image{
 text-align:center;
@@ -173,6 +141,8 @@ margin-bottom:10px;
 box-shadow:0 3px 10px rgba(0,0,0,0.2);
 }
 
+/* MAP BUTTON */
+
 .map-btn{
 display:block;
 margin:10px auto;
@@ -183,22 +153,88 @@ text-decoration:none;
 border-radius:5px;
 font-weight:bold;
 width:fit-content;
+transition:0.3s;
 }
 
 .map-btn:hover{
 background:#9EA596;
 }
 
-strong{
+/* FOOTER */
+
+footer{
+background:#D1B399;
 color:black;
+text-align:center;
+padding:12px;
+margin-top:40px;
 }
 
-footer {
-  background: #D1B399;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  margin-top: 40px;
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+.header{
+font-size:18px;
+padding:12px;
+}
+
+.header span{
+font-size:12px !important;
+}
+
+.menu-toggle{
+display:block;
+padding-left:10px;
+text-align:left;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:#D1B399;
+margin-top:15px;
+padding:10px 0;
+border-radius:8px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links a{
+padding:10px;
+font-size:16px;
+}
+
+.container{
+width:92%;
+padding:20px;
+margin:25px auto;
+}
+
+h1{
+font-size:22px;
+}
+
+h2{
+font-size:20px;
+}
+
+p{
+font-size:14px;
+line-height:1.8;
+}
+
+.company-logo img{
+max-width:160px;
+}
+
+.map-btn{
+font-size:14px;
+padding:10px 18px;
+}
+
 }
 
 </style>
@@ -213,17 +249,20 @@ INDUSTRIAL TRAINING REPORT<br>
 </div>
 
 <nav>
+
 <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
 <div class="nav-links" id="navLinks">
-  <a href="index.html">Home</a>
-  <a href="executive_summary.html">Executive Summary</a>
-  <a href="acknowledgement.html">Acknowledgement</a>
-  <a href="introduction.html">Introduction</a>
-  <a href="company_background.html">Company Background</a>
-  <a href="weekly_summary.html">Weekly Summary</a>
-  <a href="technical_report.html">Technical Report</a>
-  <a href="conclusion.html">Conclusion</a>
+<a href="index.html">Home</a>
+<a href="executive_summary.html">Executive Summary</a>
+<a href="acknowledgement.html">Acknowledgement</a>
+<a href="introduction.html">Introduction</a>
+<a href="company_background.html">Company Background</a>
+<a href="weekly_summary.html">Weekly Summary</a>
+<a href="technical_report.html">Technical Report</a>
+<a href="conclusion.html">Conclusion</a>
 </div>
+
 </nav>
 
 <div class="container">
@@ -238,35 +277,54 @@ INDUSTRIAL TRAINING REPORT<br>
 <strong>Leviat Sdn Bhd</strong> is a global leader in engineered solutions and innovative construction products, specialising in connecting, fixing and anchoring technologies for the construction and industrial sectors. The company’s trusted product brands are known for high performance, outstanding quality, and exceptional reliability. Its engineering expertise supports a wide range of applications, from structural connections and facade support systems to engineered solutions that enhance thermal and acoustic performance in buildings and infrastructure projects worldwide.
 </p>
 
-  <br>
+<br>
+
 <h2>Mission</h2>
 
 <p>
 The mission of <strong>Leviat Sdn Bhd</strong> is to deliver advanced construction solutions that empower builders to create structures capable of standing the test of time, while maintaining the highest standards of quality, performance, and reliability in every product and service provided.
 </p>
+
 <br>
 
-  <br>
 <h2>Core Business & Solutions</h2>
 
-<p>The company specializes in engineered products that make construction safer, faster and more sustainable.</p>
-<p>- <strong>Structural Connections:</strong> Mechanical rebar splicing (rebar couplers) and concrete connection accessories. </p>
-<p>- <strong>Fixing & Anchoring:</strong> Anchor channels and high performance fixing technology.</p>
-<p>- <strong>Lifting Systems:</strong> Safe handling and lifting of precast concrete elements.</p>
-<p>- <strong>Facade Support:</strong> Engineered systems for architectural facades.</p>
+<p>
+The company specializes in engineered products that make construction safer, faster and more sustainable.
+</p>
+
+<p>
+- <strong>Structural Connections:</strong> Mechanical rebar splicing (rebar couplers) and concrete connection accessories.
+</p>
+
+<p>
+- <strong>Fixing & Anchoring:</strong> Anchor channels and high performance fixing technology.
+</p>
+
+<p>
+- <strong>Lifting Systems:</strong> Safe handling and lifting of precast concrete elements.
+</p>
+
+<p>
+- <strong>Facade Support:</strong> Engineered systems for architectural facades.
+</p>
+
 <br>
 
-  <br>
 <h2>Organization Chart</h2>
+
 <div style="text-align:center; margin-top:10px;">
 <img src="image/chart.png" alt="Organization Chart" style="max-width:100%;">
 </div>
+
 <br>
 
-  <br>
 <h2>Company Location</h2>
+
 <div class="map-image">
+
 <img src="image/maps.png" alt="Company Location">
+
 <a href="https://maps.google.com/?q=Leviat+Bandar+Sunway" 
 target="_blank" 
 class="map-btn">
@@ -276,19 +334,18 @@ Open in Google Maps
 </div>
 
 </div>
+
 <br>
   
 <footer>
-  <p> © [NUUR SHAHILA AISYAH]&nbsp;&nbsp;[17DDT23F1034]</p>
+<p>©️ [NUUR SHAHILA AISYAH] &nbsp;&nbsp; [17DDT23F1034]</p>
 </footer>
 
-  <script>
+<script>
 
 function toggleMenu(){
 var menu=document.getElementById("navLinks");
-
 menu.classList.toggle("active");
-
 }
 
 </script>
