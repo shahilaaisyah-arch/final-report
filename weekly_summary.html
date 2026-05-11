@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Industrial Training Report - Weekly Summary</title>
 
 <style>
@@ -17,6 +20,8 @@ background:#f4f4f4;
 color:black;
 }
 
+/* HEADER */
+
 .header{
 background:#D1B399;
 color:black;
@@ -27,6 +32,7 @@ font-weight:bold;
 letter-spacing:1px;
 }
 
+/* NAVIGATION */
 
 nav{
 background:#D1B399;
@@ -38,15 +44,17 @@ position:relative;
 .nav-links{
 display:flex;
 justify-content:center;
+align-items:center;
 flex-wrap:wrap;
+gap:20px;
 }
 
 .nav-links a{
 color:white;
-margin:0 15px;
 text-decoration:none;
 font-weight:bold;
 position:relative;
+font-size:15px;
 }
 
 .nav-links a::after{
@@ -66,41 +74,21 @@ width:100%;
 
 .menu-toggle{
 display:none;
-font-size:22px;
+font-size:24px;
 color:white;
 font-weight:bold;
 cursor:pointer;
+text-align:left;
 }
 
-@media (max-width:768px){
-
-.menu-toggle{
-display:block;
-}
-
-.nav-links{
-display:none;
-flex-direction:column;
-margin-top:10px;
-animation:fadeIn 0.3s ease;
-}
-
-.nav-links a{
-margin:10px 0;
-font-size:15px;
-}
-
-.nav-links.active{
-display:flex;
-}
-
-}
+/* ANIMATION */
 
 @keyframes fadeIn{
 from{opacity:0;}
 to{opacity:1;}
 }
 
+/* CONTAINER */
 
 .container{
 max-width:900px;
@@ -111,7 +99,6 @@ border-radius:8px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-
 .page-title{
 font-size:26px;
 text-align:center;
@@ -119,6 +106,7 @@ margin-bottom:25px;
 font-weight:bold;
 }
 
+/* WEEK BUTTONS */
 
 .week-buttons{
 display:grid;
@@ -127,12 +115,6 @@ gap:10px;
 margin-bottom:25px;
 }
 
-@media (max-width:768px){
-  .week-buttons{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-  
 .week-btn{
 padding:12px;
 background:#B0B7AB;
@@ -149,6 +131,7 @@ background:#9EA596;
 transform:translateY(-2px);
 }
 
+/* WEEK CONTENT */
 
 .week-content{
 display:none;
@@ -173,6 +156,8 @@ line-height:1.7;
 margin-bottom:15px;
 }
 
+/* IMAGE ROW */
+
 .image-row{
 display:flex;
 gap:12px;
@@ -195,6 +180,7 @@ flex:1;
 transform:scale(1.05);
 }
 
+/* POPUP */
 
 .popup{
 display:none;
@@ -227,6 +213,8 @@ cursor:pointer;
 font-weight:bold;
 }
 
+/* FOOTER */
+
 footer{
 background:#D1B399;
 color:black;
@@ -235,11 +223,74 @@ padding:12px;
 margin-top:40px;
 }
 
+/* MOBILE RESPONSIVE */
+
 @media (max-width:768px){
 
+.header{
+font-size:18px;
+padding:12px;
+}
+
+.header span{
+font-size:12px !important;
+}
+
+.menu-toggle{
+display:block;
+padding-left:10px;
+text-align:left;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:#D1B399;
+margin-top:15px;
+padding:10px 0;
+border-radius:8px;
+animation:fadeIn 0.3s ease;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links a{
+padding:10px;
+font-size:16px;
+}
+
 .container{
-margin:20px;
+width:92%;
+margin:25px auto;
 padding:20px;
+}
+
+.page-title{
+font-size:22px;
+}
+
+.week-buttons{
+grid-template-columns:repeat(2,1fr);
+}
+
+.week-btn{
+font-size:14px;
+padding:10px;
+}
+
+.week-content{
+padding:18px;
+}
+
+.week-content h2{
+font-size:20px;
+}
+
+.week-content p{
+font-size:14px;
+line-height:1.8;
 }
 
 .image-row{
@@ -250,8 +301,9 @@ flex-direction:column;
 height:auto;
 }
 
-.week-content{
-padding:18px;
+.popup img{
+max-width:95%;
+max-height:80%;
 }
 
 }
@@ -312,7 +364,7 @@ document.write(
 </div>
 
 <footer>
-<p> © [NUUR SHAHILA AISYAH]&nbsp;&nbsp;[17DDT23F1034]</p>
+<p>©️ [NUUR SHAHILA AISYAH] &nbsp;&nbsp; [17DDT23F1034]</p>
 </footer>
 
 <script>
@@ -330,7 +382,6 @@ document.getElementById("popupImg").src=src;
 function closePopup(){
 document.getElementById("popup").style.display="none";
 }
-
 
 let weeks=[
 
@@ -522,8 +573,8 @@ let weeks=[
 <img src="image/week6-3.jpg" onclick="showPopup(this.src)">
 </div>`,
 
-  ];
-  
+];
+
 function showWeek(week){
 
 let panel=document.getElementById("weekPanel");
